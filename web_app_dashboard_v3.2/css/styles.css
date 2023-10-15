@@ -235,6 +235,75 @@ li {
     padding: 5px 10px 5px;
 }
 
+
+/* ====================================
+SOCIAL STATS
+=======================================*/
+.social-stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-blocks {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.social-block {
+    background-color: #e8eeef;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "social-img social-heading"
+        "social-img social-count"
+        "social-img social-count";
+    ;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.social-block>div {
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 5rem;
+}
+
+.social-img {
+    grid-area: social-img;
+}
+
+.social-heading {
+    grid-area: social-heading;
+    text-align: left;
+    margin: 5px 20px 0px;
+    color: #7477bf; 
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.social-count {
+    grid-area: social-count;
+    text-align: left;
+    margin: 0px 20px 0px;
+    color: grey;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+
+.social-img {
+    width: 5rem;
+    height: 5rem;
+    background-color: #7477bf;
+    padding: 1.1rem;
+    border-radius: 50%;
+    margin-right: auto;
+}
+
 /* ====================================
 FORM FIELDS AND BUTTONS
 =======================================*/
@@ -299,6 +368,15 @@ button:hover {
 
 #cancel {
     background-color: grey;
+}
+
+/* ====================================
+CHART SIZING
+=======================================*/
+canvas {
+    max-width: 100%;
+    padding-bottom: 1rem;
+    text-align: center;
 }
 
 /* ====================================
@@ -380,6 +458,42 @@ MEDIA QUERIES
     .daily-traffic {
         padding-right: 15px;
     }
+
+    /* Stack social stats horizontally */
+    .social-blocks {
+        flex-direction: row;
+    }
+
+    .social-block {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex-grow: 1;
+    }
+
+    .social-block + .social-block {
+        margin-left: 0.6rem;
+    }
+
+    .social-heading {
+        font-size: 1.2rem;
+    }
+
+    .social-count {
+        font-size: 2rem;
+
+    }
+
+    .social-img {
+        width: 3rem;
+        height: 3rem;
+        padding: 0.6rem;
+    }
+
+    .social-block>div {
+        height: 4rem;
+    }
+
+
 }
 
 
@@ -414,5 +528,23 @@ MEDIA QUERIES
 
     .new-members, .message-user {
         padding-right: 15px;
+    }
+
+    .social-block>div {
+        height: 5rem;
+    }
+
+    .social-img {
+        width: 4rem;
+        height: 4rem;
+        padding: 0.8rem;
+    }
+
+    .social-heading {
+        font-size: 1.5rem;
+    }
+
+    .social-count {
+        font-size: 2.4rem;
     }
 }
