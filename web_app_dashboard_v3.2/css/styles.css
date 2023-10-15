@@ -284,6 +284,7 @@ button {
     padding: 1em;
     border: none;
     border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
 button + button {
