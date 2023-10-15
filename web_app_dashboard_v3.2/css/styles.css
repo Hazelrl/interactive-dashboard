@@ -1,20 +1,39 @@
+/* ====================================
+BASE STYLES AND LAYOUT
+=======================================*/
+
 * {
     box-sizing: border-box;
 }
 
-/* Body styling */
-body {
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column; */
-    font-family: 'Verela Round', sans-serif;;
-    font-weight: 400;
-    text-align: center;
-    background-color: #fff;
+h2 {
+    color: darkslategray;
+    font-weight: 600;
+    text-align: left;
+    font-size: 1.25rem;
+}
 
+h3 {
+    color: darkslategray;
+    font-weight: 500;
+    padding-bottom: 0.6em;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+sup {
+    font-size: 0.5em;
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    background-color: #fff;
     display: grid;
     grid-template-areas: 
       'header'
@@ -23,123 +42,376 @@ body {
     grid-template-rows: auto auto 1fr;
     margin: 0;
     height: 100vh;
-  }
+    color: darkslategray;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dashboard grid layout */
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+    "alert"
+    "traffic"
+    "daily-traffic"
+    "mobile-users"
+    "social-stats"
+    "new-members"
+    "recent-activity"
+    "message-user"
+    "settings"
+    ;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.alert {
+    grid-area: alert;
+}
+
+.traffic {
+    grid-area: traffic;
+}
+
+.daily {
+    grid-area: daily-traffic;
+}
+
+.mobile-users {
+    grid-area: mobile-users;
+}
+
+.social-stats {
+    grid-area: social-stats;
+}
+
+.new-members {
+    grid-area: new-members;
+}
+
+.recent-activity {
+    grid-area: recent-activity;
+}
+
+.message-user {
+    grid-area: message-user;
+}
+
+.settings {
+    grid-area: settings;
+}
 
 
-/* header styling */
+/* ====================================
+HEADER
+=======================================*/
 header {
     grid-area: header;
     display: flex;
     flex-direction: row;
     background-color: #7477bf;
-    /* padding: 1em; */
+    justify-content: space-around;
+    align-items: center;
     color: #fff;
-    justify-content: flex-end;
+    padding: 10px;
 }
 
-header div {
-    flex: 1;
-    padding: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0px 10px;
+/* Webapp logo */ 
+.webapp-logo {
+    margin-right: auto;
+    font-size: 0.6em;
 }
 
-.student-profile {
-    display: flex;
-    flex-direction: row;
+/* Bell icon */
+.bell-icon {
+    padding-right: 0.6em;
+}
+.bell {
+    width: 25px;
+    height: 25px;
 }
 
-nav {
-    grid-area: nav;
-    background-color: #4d4c72;
+/* Student image */
+.student-image {
+    border-left: 0.5px solid lightgray;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    
 }
-
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.student-profile > * {
-    flex-grow: grow;
-}
-
-
-
-main {
-    grid-area: main;
-}
-
-
-header, 
-.main-nav,
- {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    align-items: center;
-}
-
-/* div {
-    display: block;
-} */
-
 .profile-photo {
-    height: 50px;
-    width: 50px;
-}
-
-
-
-.profile-photo {
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
 }
 
-.student-profile {
-    border-left: 1px solid #fff;
-    /* padding: 1em; */
-    text-wrap: nowrap;
-}
-
-.student-profile p {
-    margin-left: 0.4em;
+/* Student name */
+.student-name {
     margin-right: 0.4em;
+    font-size: 0.8em;
 }
 
-sup {
-    font-size: 0.5em;
-}
+/* ====================================
+NAVIGATION
+=======================================*/
+/* Navigation icons */
 
-nav img {
-    width: 40px;
-    height: 40px;
-}
-
-ul {
-    list-style-type: none;
-    padding-inline-start: 0px;
-}
-
-.webapp-logo {
-    align-self: flex-start;
-}
-
-.bell-icon img {
+.icon {
     width: 30px;
     height: 30px;
 }
 
-.webapp-logo {
-    flex-grow: 1; 
+/* Change colour of SVGs */
+.svg {
+    fill: #fff; 
 }
 
-.bell-icon {
-    flex-grow: 1;
+
+nav { 
+    grid-area: nav;
+    background-color: #4d4c72;
 }
 
-.student-profile {
-    flex-grow: 2;
+/* ul flexbox for 4 icons
+*/
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+#alert {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    background-color: #7477bf;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+section {
+    border-bottom: 1.5px solid lightgrey;
+    width: 100%;
+}
+
+.main-header {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+.tab-background {
+    background-color: #e8eeef;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+
+.headline {
+    margin-bottom: 1.5em;  
+    margin-left: 10px;
+}
+
+.selected {
+    background-color: #81C98F;
+    border-radius: 20px;
+    color: #fff;
+}
+
+li {
+    padding: 5px 10px 5px;
+}
+
+/* ====================================
+FORM FIELDS AND BUTTONS
+=======================================*/
+
+form, form>.message-user, form>.settings, textarea, select, #search-name, button {
+    width: 100%;
+    margin: 0 auto;
+}
+
+textarea {
+    height: 10em;
+}
+
+input[type="radio"] {
+  display: inline-block;
+}
+
+.inline-btn {
+    display: flex;
+  }
+
+.toggle {
+    display: flex;
+}
+
+textarea, select, #search-name {
+    background-color: #e8eeef;
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+
+#email-notif, #profile-public {
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggle>p {
+    margin-right: auto;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #7477bf;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+}
+
+button + button {
+    margin-left: 20px;
+}
+
+button:hover {
+    font-weight: 900;
+    background: darkcyan;
+    transition: all 0.5s ease;
+}
+
+#cancel {
+    background-color: grey;
+}
+
+/* ====================================
+MEDIA QUERIES
+=======================================*/
+
+/* Media queries */
+@media (min-width: 768px){
+    /* Change direction of nav icons */
+    ul { 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style-type: none;
+        padding-inline-start: 0px;
+    }
+
+    /* Put nav icons down left hand side */ 
+    body { 
+        grid-template-areas: 
+        'header header'
+        'nav main'
+        ;
+        grid-template-columns: 1fr 9fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    /* Change direction of traffic options */   
+    .traffic-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .traffic-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .traffic-header h3 {
+        margin-right: auto;
+    }
+
+    /* Change width of settings section */ 
+    .toggle {
+        max-width: 50%;
+    }
+
+    /* Change width of tab header*/
+    .main-header {
+        grid-template-columns: 140px 1fr;
+    }
+
+    /* Change grid template areas and spacing between and around sections */
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "alert alert"
+        "traffic traffic"
+        "daily-traffic mobile-users"
+        "social-stats social-stats"
+        "new-members new-members"
+        "recent-activity recent-activity"
+        "message-user message-user"
+        "settings settings"
+        ;
+    }
+
+    .dashboard, .headline {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .mobile-users {
+        padding-left: 15px;
+        border-left: 1px solid lightgray;
+    }
+
+    .daily-traffic {
+        padding-right: 15px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    /* Make nav icons menu narrower */
+    body {
+        grid-template-columns: 1fr 14fr;
+    }
+
+    /* Change width of settings section */
+    .toggle {
+        max-width: 75%;
+    }
+
+    /* Change grid template areas and spacing between and around sections */
+    .dashboard {
+        grid-template-areas: 
+        "alert alert"
+        "traffic traffic"
+        "daily-traffic mobile-users"
+        "social-stats social-stats"
+        "new-members recent-activity"
+        "message-user settings"
+        ;
+    }
+
+    /* Add border and padding to side-by-side sections*/
+    .recent-activity, .settings {
+        padding-left: 15px;
+        border-left: 1px solid lightgray;
+    }
+
+    .new-members, .message-user {
+        padding-right: 15px;
+    }
 }
