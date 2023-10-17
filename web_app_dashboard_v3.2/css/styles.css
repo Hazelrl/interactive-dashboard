@@ -367,7 +367,7 @@ button + button {
 
 button:hover {
     font-weight: 900;
-    background: darkcyan;
+    background: rgb(141, 221, 141);
     transition: all 0.5s ease;
 }
 
@@ -420,6 +420,48 @@ canvas {
     padding-bottom: 1rem;
     text-align: center;
 }
+
+/* ====================================
+NEW MEMBERS
+=======================================*/
+.member>img, .activity>img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin: 1rem 2rem 1rem;
+}
+
+.member-email {
+    color: #7477bf;
+}
+
+.member>p, .activity>p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.1rem;
+}
+
+.member, .activity {
+    width: 90%;
+    border-bottom: 1.5px solid lightgrey;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.members, .activities {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member:last-of-type, activity:last-of-type {
+    border-bottom: none;
+}
+
+
 
 /* ====================================
 MEDIA QUERIES
