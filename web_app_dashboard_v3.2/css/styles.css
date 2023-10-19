@@ -126,6 +126,7 @@ header {
     font-size: 0.6em;
 }
 
+/* Bell icon */
 .bell {
     width: 25px;
     height: 25px;
@@ -144,7 +145,7 @@ header {
 
 
 /* Make the bell ring */
-.bell-icon:hover {
+#bell-icon:hover {
     animation: ring 0.5s infinite; 
 }
 
@@ -165,22 +166,6 @@ header {
         transform: scale(1.1) rotate(5deg);
     }
 }
-
-/* #bell-icon-and-notif {
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .activity::after {
-    content: ">";
-    grid-area: arrow;
-    text-align: right;
-    color: #7477bf;
-    font-size: 1.5rem;
-} */
-
-
-
 
 /* Student image */
 .student-image {
@@ -232,7 +217,9 @@ ul {
     padding-inline-start: 0px;
 }
 
-#alert {
+
+/* alert box */ 
+#alert, #top-alert {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 300;
@@ -249,6 +236,35 @@ ul {
     justify-content: space-between;
 }
 
+#top-alert {
+    border-radius: 0px;
+}
+
+#detail-alert {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    background-color: #d4d5f1;
+    color: darkslategray;
+    border: none;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#detail-alert>p {
+    border-bottom: 1px dotted lightslategray;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+}
 
 section {
     border-bottom: 1.5px solid lightgrey;
@@ -312,10 +328,8 @@ SOCIAL STATS
 }
 
 .social-block>div {
-    /* background-color: pink; */
     display: flex;
     flex-direction: column;
-    align-items: left;
     height: 5rem;
 }
 
@@ -340,7 +354,6 @@ SOCIAL STATS
     font-weight: 400;
     font-size: 2.5rem;
 }
-
 
 .social-img {
     width: 5rem;
@@ -455,9 +468,6 @@ input[type="checkbox"]:checked::after {
     left: 70%;
 }
 
-
-
-/* If off is checked, display/hide */
 
 /* ====================================
 CHART SIZING

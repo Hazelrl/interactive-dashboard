@@ -19,6 +19,27 @@ alertBanner.addEventListener('click', e => {
 }
 );
 
+// Add event listen to expand the banner when use clicks on alerts bell icon
+const bell = document.getElementById("bell-icon");
+
+bell.addEventListener('click', e => {
+        alertBanner.id = '';
+        alertBanner.innerHTML = 
+        `
+            <div id="top-alert">    
+                <p><span class="bold">Alert:</span> You have unread messages</p>
+                <p class="close-notif">x</p>
+            </div>
+            <div id="detail-alert">
+                <p>Victoria Chambers liked your post</p>
+                <p>Dan Oliver commented on your post</p>
+                <p>Dawn Wood tagged you in a post</p>
+            </div>
+    `;
+    }
+)
+
+
 /***********************************
  CHART WIDGET - TRAFFIC
 ***********************************/
