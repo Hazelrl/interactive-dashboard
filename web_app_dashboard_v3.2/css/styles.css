@@ -126,14 +126,61 @@ header {
     font-size: 0.6em;
 }
 
-/* Bell icon */
-.bell-icon {
-    padding-right: 0.6em;
-}
 .bell {
     width: 25px;
     height: 25px;
 }
+
+.bell-green-notif {
+    content: ".";
+    color: rgb(56, 250, 56);
+    font-size: 2rem;
+    font-weight: bold;
+    padding-right: 15px;
+    padding-left: 0px;
+    margin: 0;
+    vertical-align: top;
+}
+
+
+/* Make the bell ring */
+.bell-icon:hover {
+    animation: ring 0.5s infinite; 
+}
+
+@keyframes ring {
+    0% {
+        transform: scale(1.1) rotate(0deg);
+    }
+    25% {
+        transform: scale(1.1) rotate(-5deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    75% {
+        transform: scale(1.1) rotate(-5deg);
+    }
+    100% {
+        transform: scale(1.1) rotate(5deg);
+    }
+}
+
+/* #bell-icon-and-notif {
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .activity::after {
+    content: ">";
+    grid-area: arrow;
+    text-align: right;
+    color: #7477bf;
+    font-size: 1.5rem;
+} */
+
+
+
 
 /* Student image */
 .student-image {
@@ -433,6 +480,8 @@ NEW MEMBERS
 
 .member-email {
     color: #7477bf;
+    font-size: 1.1rem; 
+    text-decoration: none;
 }
 
 .member>p, .activity>p {
