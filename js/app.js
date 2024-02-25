@@ -84,6 +84,8 @@ let trafficChart = new Chart(trafficCanvas, {
 /***********************************
  CHART WIDGET - DAILY CHART
 ***********************************/
+/* Select hourly, daily, weekly or monthly */
+
 
 const dailyCanvas = document.getElementById("daily-chart");
 
@@ -118,7 +120,7 @@ let dailyChart = new Chart(dailyCanvas, {
 
 
 /***********************************
- CHART WIDGET - DAILY CHART
+ CHART WIDGET - MOBILE CHART
 ***********************************/
 
 const mobileCanvas = document.getElementById("mobile-chart");

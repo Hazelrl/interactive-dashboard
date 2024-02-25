@@ -70,12 +70,33 @@
             <section class="traffic" id="traffic">
                 <div class="traffic-header">
                     <h3>Traffic</h3>
-                    <ul class="traffic-nav">
-                    <li class="traffic-nav-link selected">Hourly</li>
-                    <li class="traffic-nav-link">Daily</li>
-                    <li class="traffic-nav-link active">Weekly</li>
-                    <li class="traffic-nav-link">Monthly</li>
-                    </ul>
+                    <!-- <div class="traffic-nav">
+                        <input type="radio" id="hourly-btn" class="traffic-nav-link" value="Hourly" name="hourly" checked="checked">
+                        <li id="daily-btn" class="traffic-nav-link">Daily</li>
+                        <li id="weekly-btn" class="traffic-nav-link active">Weekly</li>
+                        <li id="monthly-btn" class="traffic-nav-link">Monthly</li>
+                    </div> -->
+                <div class="traffic-nav">
+                    <form>
+                        <label>
+                            <input type="radio" id="hourly-btn" class="traffic-nav-link" value="Hourly" name="traffic-nav-option" checked="checked">
+                        </label>
+                    
+                        <label>
+                            <input type="radio" id="daily-btn" class="traffic-nav-link" value="Daily" name="traffic-nav-option">
+                        </label>
+                    
+                        <label>
+                            <input type="radio" id="weekly-btn" class="traffic-nav-link" value="Weekly" name="traffic-nav-option">
+                        </label>
+
+                        <label>
+                            <input type="radio" id="monthly-btn" class="traffic-nav-link" value="Monthly" name="traffic-nav-option">
+                        </label>
+                    </form>
+                </div>
+                    <!--<input class="xChart" type="radio" value="Hourly" name="abcd" id="hourly" checked="checked">-->
+
                 </div>
                     <div class="widget-container-full">
                     <canvas id="traffic-chart"></canvas>
