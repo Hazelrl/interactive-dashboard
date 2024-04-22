@@ -74,7 +74,7 @@ let trafficOptionsHourly = {
     }
 };
 
-let trafficChartHourly = new Chart(trafficCanvas, {
+let trafficChartHourly = new Chart(trafficCanvasHourly, {
     type: 'line',
     data: trafficDataHourly,
     options: trafficOptionsHourly
@@ -116,7 +116,7 @@ let trafficOptionsDaily = {
     }
 };
 
-let trafficChartDaily = new Chart(trafficCanvas, {
+let trafficChartDaily = new Chart(trafficCanvasDaily, {
     type: 'line',
     data: trafficDataDaily,
     options: trafficOptionsDaily
