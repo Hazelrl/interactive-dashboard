@@ -40,56 +40,15 @@ bell.addEventListener('click', e => {
 )
 
 /* Select hourly, daily, weekly or monthly */
-/***********************************
- CHART WIDGET - TRAFFIC - HOURLY
-***********************************/
-
-const trafficCanvasHourly = document.getElementById("traffic-chart-hourly");
-
-let trafficDataHourly = {
-    labels: [ 'Hourly','23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31' ],
-    datasets: [{
-        data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1900, 2250, 1500, 2500],
-        backgroundColor: 'rgba(116, 119, 191, .3)',
-        borderWidth: 1
-    }]
-};
-
-let trafficOptionsHourly = {
-    backgroundColor: 'rgba(112, 104, 201, .5)',
-    fill: true,
-    aspectRatio: 2.5,
-    animation: {
-        duration: 0
-        },
-    scales: {
-        y: {
-        beginAtZero: true
-        }
-    },
-    plugins: {
-        legend: {
-        display: false
-        }
-    }
-};
-
-let trafficChartHourly = new Chart(trafficCanvasHourly, {
-    type: 'line',
-    data: trafficDataHourly,
-    options: trafficOptionsHourly
-});
-
-
 
 /***********************************
- CHART WIDGET - TRAFFIC - DAILY
+ CHART WIDGET - TRAFFIC
 ***********************************/
 
-const trafficCanvasDaily = document.getElementById("traffic-chart-daily");
+const trafficCanvas = document.getElementById("traffic-chart");
 
-let trafficDataDaily = {
-    labels: [ 'Daily','23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31' ],
+let trafficData = {
+    labels: [ '16-22','23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31' ],
     datasets: [{
         data: [1750, 2250, 1000, 500, 1700, 1700, 1000, 900, 1250, 1500, 2],
         backgroundColor: 'rgba(116, 119, 191, .3)',
@@ -97,7 +56,7 @@ let trafficDataDaily = {
     }]
 };
 
-let trafficOptionsDaily = {
+let trafficOptions = {
     backgroundColor: 'rgba(112, 104, 201, .5)',
     fill: true,
     aspectRatio: 2.5,
@@ -116,10 +75,10 @@ let trafficOptionsDaily = {
     }
 };
 
-let trafficChartDaily = new Chart(trafficCanvasDaily, {
+let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
-    data: trafficDataDaily,
-    options: trafficOptionsDaily
+    data: trafficData,
+    options: trafficOptions
 });
 
 
