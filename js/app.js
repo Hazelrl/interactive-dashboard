@@ -44,10 +44,10 @@ bell.addEventListener('click', e => {
  CHART WIDGET - TRAFFIC - HOURLY
 ***********************************/
 
-const trafficCanvas = document.getElementById("traffic-chart-hourly");
+const trafficCanvasHourly = document.getElementById("traffic-chart-hourly");
 
 let trafficDataHourly = {
-    labels: [ '16-22','23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31' ],
+    labels: [ 'Hourly','23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31' ],
     datasets: [{
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1900, 2250, 1500, 2500],
         backgroundColor: 'rgba(116, 119, 191, .3)',
@@ -76,8 +76,8 @@ let trafficOptionsHourly = {
 
 let trafficChartHourly = new Chart(trafficCanvas, {
     type: 'line',
-    data: trafficData,
-    options: trafficOptions
+    data: trafficDataHourly,
+    options: trafficOptionsHourly
 });
 
 
@@ -86,10 +86,10 @@ let trafficChartHourly = new Chart(trafficCanvas, {
  CHART WIDGET - TRAFFIC - DAILY
 ***********************************/
 
-const trafficCanvas = document.getElementById("traffic-chart-daily");
+const trafficCanvasDaily = document.getElementById("traffic-chart-daily");
 
 let trafficDataDaily = {
-    labels: [ '16-22','23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31' ],
+    labels: [ 'Daily','23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31' ],
     datasets: [{
         data: [1750, 2250, 1000, 500, 1700, 1700, 1000, 900, 1250, 1500, 2],
         backgroundColor: 'rgba(116, 119, 191, .3)',
@@ -118,8 +118,8 @@ let trafficOptionsDaily = {
 
 let trafficChartDaily = new Chart(trafficCanvas, {
     type: 'line',
-    data: trafficData,
-    options: trafficOptions
+    data: trafficDataDaily,
+    options: trafficOptionsDaily
 });
 
 
